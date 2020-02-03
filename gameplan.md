@@ -17,3 +17,11 @@ add ability to tell x digits correctly
 and y digits + locations correctly
 add ability to view previous guesses
 limit the input to desired # of digits
+
+scenario where the first digit is incorrect but is in the the rest of it but then the second digit is the same as the first and is right
+
+code:
+1010
+
+guess
+0011
