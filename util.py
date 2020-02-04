@@ -22,3 +22,11 @@ def get_code_list(URL, PARAMS):
     # code_list = [int(num) for num in num_str_list]
 
     return num_str_list
+
+
+def count_white(x):
+    pass
+
+
+def count_black(x):
+    pass

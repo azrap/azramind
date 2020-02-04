@@ -55,37 +55,33 @@ while (n != code_str and tries < limit):
     # correct = ['X']*4
 
     # for loop runs 4 times since the number has 4 digits.
+
+    # making copies of code_str_list to manipulate as needed
     black_temp_code = code_str_list.copy()
     white_temp_code = code_str_list.copy()
+
     for i in range(0, len(code_str_list)):
-        # print('i', i)
-        # print('n', n)
-        # print('length n', len(n))
-        # print('length code str list', len(code_str_list))
 
         # checking for equality of digits
         if (n[i] == black_temp_code[i]):
             # number of digits + locations guessed correctly increments
             black += 1
 
+        # counting the number of times digits guessed correctly
         if(n[i] in white_temp_code):
             white += 1
-            # print('temp_code before white match', white_temp_code)
-            # print('i', i)
-            # print('n[i]', n[i])
-            white_temp_code.remove(n[i])
-            # print('temp_code after white match', white_temp_code)
 
-    # print('white', white)
-    # print('black', black)
+            white_temp_code.remove(n[i])
+
+    # number of times digits guessed correctly but location guessed incorrectly
     white = white-black
 
     # when not all the digits are guessed correctly.
     if (black != 4):
         if (white > 0):
-            print(f"You got {white} digits correct")
+            print(f"You got {white} digits correct but not their location")
         if (black > 0):
-            print(f"You got {black} digits annd their location correct")
+            print(f"You got {black} digits and their location correct")
 
         print(f"you have {limit-tries} tries remaining")
 
