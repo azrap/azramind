@@ -15,7 +15,7 @@ PARAMS = {
     'max': 4,  # max int
     'col': 1,
     'base': 10,
-    'format': 'plain',
+    'format': 'plaine',
     'rnd': 'new'
 }
 
@@ -44,18 +44,7 @@ while (n != code_str and tries < limit):
     black = 0
     white = 0
 
-    # explicit type conversion of an integer to
-    # a string in order to ease extraction of digits
-    n = str(n)
-
-    # explicit type conversion of a string to an integer
-    # num = str(num)
-
-    # # correct[] list stores digits which are correct
-    # correct = ['X']*4
-
-    # for loop runs 4 times since the number has 4 digits.
-
+    
     # making copies of code_str_list to manipulate as needed
     black_temp_code = code_str_list.copy()
     white_temp_code = code_str_list.copy()
